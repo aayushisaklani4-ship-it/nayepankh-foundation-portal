@@ -1,0 +1,221 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+body{
+    background:#f4f4f4;
+}
+
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px;
+    background:#0d6efd;
+    color:white;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:20px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+}
+
+.hero{
+    text-align:center;
+    padding:150px 20px;
+    color:white;
+    background:
+    linear-gradient(
+    rgba(0,0,0,0.6),
+    rgba(0,0,0,0.6)),
+    url("https://images.unsplash.com/photo-1522202176988-66273c2fd55f");
+
+    background-size:cover;
+    background-position:center;
+}
+
+.hero h1{
+    font-size:3rem;
+}
+
+.hero p{
+    margin:20px 0;
+}
+
+.btn{
+    background:#198754;
+    color:white;
+    border:none;
+    padding:12px 25px;
+    cursor:pointer;
+}
+
+.stats{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    padding:50px;
+}
+
+.box{
+    background:white;
+    padding:20px;
+    border-radius:10px;
+    box-shadow:0 2px 8px rgba(0,0,0,0.2);
+    text-align:center;
+    transition:0.3s;
+}
+
+.box:hover{
+    transform:translateY(-10px);
+}
+
+@media(max-width:768px){
+
+    nav{
+        flex-direction:column;
+    }
+
+    .stats{
+        flex-direction:column;
+    }
+
+    .hero h1{
+        font-size:2rem;
+    }
+
+}
+.dark{
+    background:#121212;
+    color:white;
+}
+
+.dark .box{
+    background:#1f1f1f;
+    color:white;
+}
+
+.dark nav{
+    background:#222;
+}
+.programs{
+    padding:80px 20px;
+    text-align:center;
+}
+
+.cards{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+    margin-top:30px;
+}
+
+.card{
+    background:white;
+    width:300px;
+    padding:25px;
+    border-radius:10px;
+    box-shadow:0 2px 8px rgba(0,0,0,0.2);
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+}
+.contact-form{
+    max-width:500px;
+    margin:30px auto;
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}
+
+.contact-form input,
+.contact-form textarea{
+    padding:12px;
+    border:1px solid #ccc;
+    border-radius:5px;
+}
+
+.contact-form button{
+    padding:12px;
+    background:#198754;
+    color:white;
+    border:none;
+    cursor:pointer;
+    border-radius:5px;
+}
+
+.contact-form button:hover{
+    opacity:0.9;
+}
+footer{
+    background:#0d6efd;
+    color:white;
+    text-align:center;
+    padding:20px;
+    margin-top:50px;
+}
+.hero,
+.programs,
+.stats{
+    animation:fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn{
+    from{
+        opacity:0;
+        transform:translateY(20px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+@media(max-width:768px){
+
+    .hero h1{
+        font-size:2.2rem;
+    }
+
+    .hero p{
+        font-size:1rem;
+    }
+
+    nav ul{
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+}
+@media(max-width:768px){
+
+    nav{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    nav ul{
+        display:flex;
+        flex-wrap:wrap;
+        justify-content:center;
+        gap:15px;
+        margin:10px 0;
+    }
+
+    #themeBtn{
+        margin-top:10px;
+    }
+
+}
